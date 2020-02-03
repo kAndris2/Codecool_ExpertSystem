@@ -13,22 +13,22 @@ namespace Expert
 
         public string getId()
         {
-
+            return null;
         }
 
         public string getQuestion()
         {
-
+            return null;
         }
 
         public Answer getAnswer()
         {
-
+            return null;
         }
 
         public bool getEvaluatedAnswer(string input)
         {
-
+            return true;
         }
     }
 }

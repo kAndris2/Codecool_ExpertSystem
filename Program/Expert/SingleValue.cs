@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Expert
 {
-    class SingleValue
+    class SingleValue : Value
     {
         public SingleValue(string param, bool selectionType)
         {

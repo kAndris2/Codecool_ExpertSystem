@@ -8,7 +8,7 @@ namespace Expert
     {
         public bool evaluateAnswerByInput(string input)
         {
-
+            return true;
         }
 
         public void addValue()

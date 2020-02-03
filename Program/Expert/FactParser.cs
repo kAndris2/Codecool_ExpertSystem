@@ -4,11 +4,18 @@ using System.Text;
 
 namespace Expert
 {
-    class FactParser
+    class FactParser : XMLParser
     {
+        FactRepository repo;
+
+        public FactParser()
+        {
+            repo = getFactRepository();
+        }
+
         public FactRepository getFactRepository()
         {
-
+            return new FactRepository();
         }
     }
 }

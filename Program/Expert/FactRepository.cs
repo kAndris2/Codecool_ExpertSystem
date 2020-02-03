@@ -11,9 +11,11 @@ namespace Expert
 
         }
 
+        /*
         public Iterator<Fact> getIterator()
         {
 
         }
+        */
     }
 }

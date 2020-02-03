@@ -11,7 +11,8 @@ namespace Expert
 
         }
 
-        public Set<String> getIdSet()
+        //Set?!?
+        public List<String> getIdSet()
         {
             return null;
         }
@@ -23,7 +24,7 @@ namespace Expert
 
         public bool getValueById(string id)
         {
-            return null;
+            return true;
         }
 
         public string getDescription()

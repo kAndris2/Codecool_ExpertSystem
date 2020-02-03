@@ -4,11 +4,18 @@ using System.Text;
 
 namespace Expert
 {
-    class RuleParser
+    class RuleParser : XMLParser
     {
+        RuleRepository repo;
+
+        public RuleParser()
+        {
+            repo = getRuleRepository();
+        }
+
         public RuleRepository getRuleRepository()
         {
-
+            return new RuleRepository();
         }
     }
 }

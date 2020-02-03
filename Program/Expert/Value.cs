@@ -8,12 +8,12 @@ namespace Expert
     {
         public List<string> getInputPattern()
         {
-
+            return null;
         }
 
         public bool getSelectionType()
         {
-
+            return true;
         }
     }
 }

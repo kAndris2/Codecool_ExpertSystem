@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Expert
 {
-    class MultipleValue
+    class MultipleValue : Value
     {
         public MultipleValue(List<string> param, bool selectionType)
         {

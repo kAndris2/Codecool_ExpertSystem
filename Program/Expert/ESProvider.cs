@@ -18,12 +18,12 @@ namespace Expert
 
         public bool getAnswerByQuestion()
         {
-
+            return true;
         }
 
         public string evaluate()
         {
-
+            return null;
         }
     }
 }
