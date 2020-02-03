@@ -6,13 +6,16 @@ namespace Expert
 {
     class Fact
     {
+        string id { get; set; }
+        string description { get; set; }
+
         public Fact(string id, string description)
         {
-
+            this.id = id;
+            this.description = description;
         }
 
-        //Set?!?
-        public List<String> getIdSet()
+        public HashSet<string> getIdSet()
         {
             return null;
         }
@@ -27,9 +30,6 @@ namespace Expert
             return true;
         }
 
-        public string getDescription()
-        {
-            return null;
-        }
+        public string getDescription() { return description; }
     }
 }

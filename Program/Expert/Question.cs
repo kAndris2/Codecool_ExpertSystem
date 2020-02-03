@@ -6,25 +6,20 @@ namespace Expert
 {
     class Question
     {
+        string question { get; set; }
+        string id { get; set; }
+        Answer answer { get; set; }
+
         public Question(string id, string question, Answer answer)
         {
-
+            this.id = id;
+            this.question = question;
+            this.answer = answer;
         }
 
-        public string getId()
-        {
-            return null;
-        }
-
-        public string getQuestion()
-        {
-            return null;
-        }
-
-        public Answer getAnswer()
-        {
-            return null;
-        }
+        public string getId() { return id; }
+        public string getQuestion() { return question; }
+        public Answer getAnswer() { return answer; }
 
         public bool getEvaluatedAnswer(string input)
         {

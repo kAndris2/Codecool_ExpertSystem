@@ -6,7 +6,7 @@ namespace Expert
 {
     class RuleRepository
     {
-        Dictionary<string, string> questions = new Dictionary<string, string>();
+        Dictionary<string, Question> questions = new Dictionary<string, Question>();
         QuestionIterator Iquestion;
 
         public RuleRepository()
