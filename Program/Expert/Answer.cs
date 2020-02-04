@@ -8,6 +8,7 @@ namespace Expert
     {
         List<string> values = new List<string>();
         private Value value;
+
         public Answer(string[] values)
         {
             for (int i = 0; i < values.Length; i++)
