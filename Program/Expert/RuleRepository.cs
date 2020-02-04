@@ -6,14 +6,18 @@ namespace Expert
 {
     class RuleRepository
     {
-        List<Question> questions = new List<Question>();
-        private Question question;
+        QuestionIterator questionIterator ;
+        public List<Question> questions = new List<Question>();
+        Question question;
 
         public void addQuestion(Question question)
         {
-            this.question = question;
+            questions.Add(question);
         }
 
-        public IEnumerator<Question> getEnumerator() { return new QuestionIterator(questions); }
+        public IEnumerator<Question> getEnumerator() 
+        { 
+            return new QuestionIterator(questions); 
+        }
     }
 }

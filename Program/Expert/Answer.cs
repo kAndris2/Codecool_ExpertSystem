@@ -11,7 +11,7 @@ namespace Expert
         public Answer(string[] values)
         {
             for (int i = 0; i < values.Length; i++)
-                this.values[i] = values[i];
+                this.values.Add(values[i]);
         }
 
         public bool evaluateAnswerByInput(string input)
