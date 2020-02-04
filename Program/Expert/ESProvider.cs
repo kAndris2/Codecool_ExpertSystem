@@ -6,9 +6,12 @@ namespace Expert
 {
     class ESProvider
     {
+        FactParser factParser;
+        RuleParser ruleParser;
         public ESProvider(FactParser factParser, RuleParser ruleParser)
         {
-
+            this.factParser = factParser;
+            this.ruleParser = ruleParser;
         }
 
         public void collectAnswers()

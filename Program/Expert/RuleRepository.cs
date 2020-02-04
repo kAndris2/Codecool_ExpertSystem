@@ -19,11 +19,11 @@ namespace Expert
             this.question = question;
         }
 
-        /*
-        public Iterator<Question> getIterator()
+        
+        public IEnumerator<Question> getIterator()
         {
             return null;
         }
-        */
+        
     }
 }

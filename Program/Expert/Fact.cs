@@ -10,11 +10,11 @@ namespace Expert
         string description { get; set; }
         Dictionary<string, bool> evals { get; set; } = new Dictionary<string, bool>();
 
-        public Fact(string id, string description, Dictionary<string, bool> evals)
+        public Fact(string id, string description)
         {
             this.id = id;
             this.description = description;
-            this.evals = evals;
+            
         }
 
         public HashSet<string> getIdSet()
@@ -24,7 +24,7 @@ namespace Expert
 
         public void setFactValueById(string id, bool value)
         {
-
+            this.evals.Add(id, value);
         }
 
         public bool getValueById(string id) { return evals[id]; }
