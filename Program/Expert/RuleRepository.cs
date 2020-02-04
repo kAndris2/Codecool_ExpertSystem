@@ -6,24 +6,14 @@ namespace Expert
 {
     class RuleRepository
     {
-        Dictionary<string, Question> questions = new Dictionary<string, Question>();
-        QuestionIterator Iquestion;
+        List<Question> questions = new List<Question>();
         private Question question;
-        public RuleRepository()
-        {
-            Iquestion = new QuestionIterator();
-        }
 
         public void addQuestion(Question question)
         {
             this.question = question;
         }
 
-        
-        public IEnumerator<Question> getIterator()
-        {
-            return null;
-        }
-        
+        public IEnumerator<Question> getEnumerator() { return new QuestionIterator(questions); }
     }
 }
