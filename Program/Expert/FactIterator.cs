@@ -7,10 +7,10 @@ namespace Expert
 {
     class FactIterator : IEnumerator<Fact>
     {
-        Fact[] facts;
+        List<Fact> facts;
         int position = -1;
 
-        public FactIterator(Fact[] facts)
+        public FactIterator(List<Fact> facts)
         {
             this.facts = facts;
         }
@@ -48,7 +48,7 @@ namespace Expert
         bool IEnumerator.MoveNext()
         {
             position++;
-            return (position < facts.Length);
+            return (position < facts.Count);
         }
 
         void IEnumerator.Reset()

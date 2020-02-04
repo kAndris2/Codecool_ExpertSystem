@@ -6,9 +6,11 @@ namespace Expert
 {
     class FactRepository
     {
+        private Fact fact;
+
         public void addFact(Fact fact)
         {
-
+            this.fact = fact;
         }
 
         /*

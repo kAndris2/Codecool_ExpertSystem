@@ -7,10 +7,10 @@ namespace Expert
 {
     class QuestionIterator : IEnumerator<Question>
     {
-        Question[] questions;
+        List<Question> questions;
         int position = -1;
 
-        public QuestionIterator(Question[] questions)
+        public QuestionIterator(List<Question> questions)
         {
             this.questions = questions;
         }
@@ -48,7 +48,7 @@ namespace Expert
         bool IEnumerator.MoveNext()
         {
             position++;
-            return (position < questions.Length);
+            return (position < questions.Count);
         }
 
         void IEnumerator.Reset()

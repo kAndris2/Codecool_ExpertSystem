@@ -16,7 +16,12 @@ namespace Expert
 
         public IEnumerator<Question> getEnumerator()
         {
-            return new QuestionIterator();
+            List<Question> temp = new List<Question>();
+
+            foreach (KeyValuePair<string, Question> item in questions)
+                temp.Add(item.Value);
+
+            return new QuestionIterator(temp);
         }
     }
 }
