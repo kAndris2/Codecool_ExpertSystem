@@ -5,16 +5,55 @@ using System.Text;
 
 namespace Expert
 {
-    class FactIterator : IEnumerable<Fact>
+    class FactIterator : IEnumerator<Fact>
     {
-        IEnumerator<Fact> IEnumerable<Fact>.GetEnumerator()
+        Fact[] facts;
+        int position = -1;
+
+        public FactIterator(Fact[] facts)
+        {
+            this.facts = facts;
+        }
+
+        //Fact IEnumerator<Fact>.Current => throw new NotImplementedException();
+
+        object IEnumerator.Current
+        {
+            get
+            {
+                return Current;
+            }
+        }
+
+        public Fact Current
+        {
+            get
+            {
+                try
+                {
+                    return facts[position];
+                }
+                catch (IndexOutOfRangeException)
+                {
+                    throw new InvalidOperationException();
+                }
+            }
+        }
+
+        void IDisposable.Dispose()
         {
             throw new NotImplementedException();
         }
 
-        IEnumerator IEnumerable.GetEnumerator()
+        bool IEnumerator.MoveNext()
         {
-            throw new NotImplementedException();
+            position++;
+            return (position < facts.Length);
+        }
+
+        void IEnumerator.Reset()
+        {
+            position = -1;
         }
     }
 }
