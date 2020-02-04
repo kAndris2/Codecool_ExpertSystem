@@ -13,9 +13,11 @@ namespace Expert
             repo = getFactRepository();
         }
 
-        public FactRepository getFactRepository()
+        public FactRepository getFactRepository() { return new FactRepository(); }
+
+        public override void loadXmlDocument(string xmlPath)
         {
-            return new FactRepository();
+
         }
     }
 }

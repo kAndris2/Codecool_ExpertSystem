@@ -6,9 +6,6 @@ namespace Expert
 {
     abstract class XMLParser
     {
-        public void loadXmlDocument(string xmlPath)
-        {
-
-        }
+        public abstract void loadXmlDocument(string xmlPath);
     }
 }

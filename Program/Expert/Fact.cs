@@ -8,11 +8,13 @@ namespace Expert
     {
         string id { get; set; }
         string description { get; set; }
+        Dictionary<string, bool> evals { get; set; } = new Dictionary<string, bool>();
 
-        public Fact(string id, string description)
+        public Fact(string id, string description, Dictionary<string, bool> evals)
         {
             this.id = id;
             this.description = description;
+            this.evals = evals;
         }
 
         public HashSet<string> getIdSet()
@@ -25,10 +27,7 @@ namespace Expert
 
         }
 
-        public bool getValueById(string id)
-        {
-            return true;
-        }
+        public bool getValueById(string id) { return evals[id]; }
 
         public string getDescription() { return description; }
     }

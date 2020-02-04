@@ -13,9 +13,11 @@ namespace Expert
             repo = getRuleRepository();
         }
 
-        public RuleRepository getRuleRepository()
+        public RuleRepository getRuleRepository() { return new RuleRepository(); }
+
+        public override void loadXmlDocument(string xmlPath)
         {
-            return new RuleRepository();
+
         }
     }
 }
