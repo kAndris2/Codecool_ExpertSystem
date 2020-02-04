@@ -28,19 +28,15 @@ namespace Expert
                 List<string> tempValue =new List<string>();
                 tempValue.Add(xmlNode.ChildNodes[1].ChildNodes[0].ChildNodes[0].Name);
                 string[] answers = new string[tempValue.Count];
-                Console.WriteLine(tempID);
-                Console.WriteLine(tempDescription);
+                
                 
                 for (int i = 0; i < tempValue.Count; i++)
                 {
                     answers[i] = tempValue[i];
-                    Console.WriteLine(answers[i]);
+                    
 
                 }
-                
-
-
-                Question q = new Question(tempID, tempDescription, new Answer(answers));
+                ruleRepository.addQuestion(new Question(tempID, tempDescription, new Answer(answers)));
                 
             }
         }

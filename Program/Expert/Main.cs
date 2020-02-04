@@ -8,9 +8,10 @@ namespace Expert
         static void Main(string[] args)
         {
             ESProvider esp = new ESProvider(new FactParser(), new RuleParser());
-            esp.collectAnswers();
+            
             Console.WriteLine("---------------");
             XmlDocument xmlDoc = new XmlDocument();
+            esp.collectAnswers();
             //xmlDoc.Load("rules.xml");
             ////foreach (XmlNode xmlNode in xmlDoc.DocumentElement)
             ////{
