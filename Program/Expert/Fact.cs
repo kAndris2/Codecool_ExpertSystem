@@ -8,7 +8,7 @@ namespace Expert
     {
         string id { get; set; }
         string description { get; set; }
-        Dictionary<string, bool> evals { get; set; } = new Dictionary<string, bool>();
+        public Dictionary<string, bool> evals { get; set; } = new Dictionary<string, bool>();
 
         public Fact(string id, string description)
         {

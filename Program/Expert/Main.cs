@@ -18,6 +18,13 @@ namespace Expert
             //    //Console.WriteLine(xmlNode.ChildNodes[0].InnerText); //Q
             //    //Console.WriteLine(xmlNode.ChildNodes[1].ChildNodes[0].ChildNodes[0].Name); //A
             //    Console.WriteLine(xmlNode.ChildNodes[0].InnerText);
+            xmlDoc.Load("facts.xml");
+            foreach (XmlNode xmlNode in xmlDoc.DocumentElement)
+            {
+                foreach(XmlNode item in xmlNode.ChildNodes[1])
+                {
+                    Console.WriteLine(item.InnerText);
+                }
 
             //}
         }

@@ -13,11 +13,6 @@ namespace Expert
             this.fact = fact;
         }
 
-        /*
-        public Iterator<Fact> getIterator()
-        {
-
-        }
-        */
+        //public IEnumerator<Fact> getEnumerator() { return new FactIterator(fact.evals); }
     }
 }
