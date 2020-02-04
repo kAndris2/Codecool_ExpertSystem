@@ -17,13 +17,13 @@ namespace Expert
 
         public void collectAnswers()
         {
-            Question q1 = new Question("1", "q1?", new Answer(new string[] { "ws","sdf"}));
-            Question q2 = new Question("2", "q2?", new Answer(new string[] { "ws", "sdf" }));
-            //ruleParser.getRuleRepository().addQuestion(q1);
-            //ruleParser.getRuleRepository().addQuestion(q2);
-            ruleParser.getRuleRepository().questions.Add(q1);
-            ruleParser.getRuleRepository().questions.Add(q2);
-                                    
+            //Question q1 = new Question("1", "q1?", new Answer(new string[] { "ws","sdf"}));
+            //Question q2 = new Question("2", "q2?", new Answer(new string[] { "ws", "sdf" }));
+            ////ruleParser.getRuleRepository().addQuestion(q1);
+            ////ruleParser.getRuleRepository().addQuestion(q2);
+            //ruleParser.getRuleRepository().questions.Add(q1);
+            //ruleParser.getRuleRepository().questions.Add(q2);
+            ruleParser.loadXmlDocument("rules.xml");
             IEnumerator<Question> enumerator = ruleParser.getRuleRepository().getEnumerator();
             while (enumerator.MoveNext())
             {
