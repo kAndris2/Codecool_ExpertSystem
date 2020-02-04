@@ -8,7 +8,7 @@ namespace Expert
     {
         Dictionary<string, Question> questions = new Dictionary<string, Question>();
         QuestionIterator Iquestion;
-
+        private Question question;
         public RuleRepository()
         {
             Iquestion = new QuestionIterator();
@@ -16,7 +16,7 @@ namespace Expert
 
         public void addQuestion(Question question)
         {
-
+            this.question = question;
         }
 
         /*

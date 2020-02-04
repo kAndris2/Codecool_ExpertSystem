@@ -8,7 +8,7 @@ namespace Expert
     {
         string question { get; set; }
         string id { get; set; }
-        Answer answer { get; set; }
+        private Answer answer;
 
         public Question(string id, string question, Answer answer)
         {
