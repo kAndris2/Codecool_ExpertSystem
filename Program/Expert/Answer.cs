@@ -14,9 +14,9 @@ namespace Expert
             {
                 string[] temp = values[i].getInputPattern();
                 if (Array.Exists(temp, element => element == input))
-                    return true;
+                    return values[i].getSelectionType();
             }
-            return false;
+            throw new ArgumentException("Invalid input");
         }
 
         public void addValue(Value value)

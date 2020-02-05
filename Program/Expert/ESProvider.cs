@@ -27,15 +27,9 @@ namespace Expert
                 Console.WriteLine(enumerator.Current.getQuestion());
                 bool userInput = enumerator.Current.getEvaluatedAnswer(Console.ReadLine());
                 
-                if (userInput)
-                {
-                    userAnswers.Add(enumerator.Current.getId(), userInput);
-                    
-                }
-                else
-                {
-                    throw new ArgumentException("Invalid input.");
-                }
+                
+                userAnswers.Add(enumerator.Current.getId(), userInput);
+                 
                 
 
             }
@@ -48,6 +42,12 @@ namespace Expert
 
         public string evaluate()
         {
+
+            foreach (var item in userAnswers)
+            {
+                Console.WriteLine($"{item.Key} : {item.Value}");
+            }
+            
             return null;
         }
     }

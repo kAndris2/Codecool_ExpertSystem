@@ -9,7 +9,7 @@ namespace Expert
         {
             ESProvider esp = new ESProvider(new FactParser(), new RuleParser());
             esp.collectAnswers();
-
+            esp.evaluate();
             
         }
     }
