@@ -13,6 +13,9 @@ namespace Expert
             this.fact = fact;
         }
 
-        //public IEnumerator<Fact> getEnumerator() { return new FactIterator(fact.evals); }
+        public IEnumerator<Fact> getEnumerator() 
+        {
+            return new FactIterator( new FactParser().Facts ); 
+        }
     }
 }

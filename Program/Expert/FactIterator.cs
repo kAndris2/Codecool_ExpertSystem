@@ -7,7 +7,7 @@ namespace Expert
 {
     class FactIterator : IEnumerator<Fact>
     {
-        List<Fact> facts;
+        List<Fact> facts { get; set; } = new List<Fact>();
         int position = -1;
 
         public FactIterator(List<Fact> facts)
