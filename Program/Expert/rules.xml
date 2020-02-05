@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Rules>
-    <Rule id="money">
+    <Rule id="family">
+        <Question>Do you need a family a car?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="yes"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
+	<Rule id="money">
         <Question>Do you have 20.000.000 HUF for a car?</Question>
         <Answer>
             <Selection value="true">

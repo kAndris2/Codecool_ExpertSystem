@@ -18,7 +18,7 @@ namespace Expert
 
         public void collectAnswers()
         {
-            
+            factParser.loadXmlDocument("facts.xml");
             ruleParser.loadXmlDocument("rules.xml");
             IEnumerator<Question> enumerator = ruleParser.getRuleRepository().getEnumerator();
             
@@ -35,19 +35,37 @@ namespace Expert
             }
         }
 
-        public bool getAnswerByQuestion()
+        public bool getAnswerByQuestion(string questionId)
         {
-            return true;
+            
+            return userAnswers[questionId];
         }
 
         public string evaluate()
         {
-
-            foreach (var item in userAnswers)
-            {
-                Console.WriteLine($"{item.Key} : {item.Value}");
-            }
             
+            
+            
+            
+            
+            int checkCounter;
+            foreach (var fact in factParser.Facts)
+            {
+                
+                checkCounter = 0;
+                foreach (var answer in fact.evals)
+                {
+                    
+                    if (getAnswerByQuestion(answer.Key).Equals(fact.evals[answer.Key]))
+                    {
+                        checkCounter++;
+                    }
+                }
+                if (checkCounter == userAnswers.Count)
+                {
+                    return fact.getDescription();
+                }
+            }
             return null;
         }
     }

@@ -6,7 +6,7 @@ namespace Expert
 {
     class Fact
     {
-        string id { get; set; }
+        public string id { get; set; }
         string description { get; set; }
         public Dictionary<string, bool> evals { get; set; } = new Dictionary<string, bool>();
         private HashSet<string> factIDs = new HashSet<string>();
