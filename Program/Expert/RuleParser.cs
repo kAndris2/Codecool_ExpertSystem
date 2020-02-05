@@ -47,19 +47,6 @@ namespace Expert
                     
                    
                 }
-                
-
-                string[] selectionString2 = (xmlNode.ChildNodes[1].ChildNodes[1].ChildNodes[0].Attributes["value"].Value).Split(",");
-                string selectionType2 = xmlNode.ChildNodes[1].ChildNodes[1].Attributes["value"].Value;
-
-
-
-
-                //Console.WriteLine(xmlNode.ChildNodes[1].ChildNodes[0].Attributes["value"].Value);
-                //Console.WriteLine(xmlNode.ChildNodes[1].ChildNodes[0].ChildNodes[0].Name);
-                //Console.WriteLine(xmlNode.ChildNodes[1].ChildNodes[0].ChildNodes[0].Attributes["value"].Value);
-
-
 
                 tempValue.Add(xmlNode.ChildNodes[1].ChildNodes[0].ChildNodes[0].Name);
                 
