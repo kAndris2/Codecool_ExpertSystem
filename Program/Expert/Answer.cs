@@ -7,22 +7,21 @@ namespace Expert
     class Answer
     {
         List<Value> values = new List<Value>();
-        Value value;
-
-        public Answer()
-        {
-            
-        }
 
         public bool evaluateAnswerByInput(string input)
         {
-            return true;
+            for (int i = 0; i < values.Count; i++)
+            {
+                string[] temp = values[i].getInputPattern();
+                if (Array.Exists(temp, element => element == input))
+                    return true;
+            }
+            return false;
         }
 
         public void addValue(Value value)
         {
             values.Add(value);
         }
-        
     }
 }
