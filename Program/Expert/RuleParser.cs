@@ -50,7 +50,7 @@ namespace Expert
 
                 tempValue.Add(xmlNode.ChildNodes[1].ChildNodes[0].ChildNodes[0].Name);
                 
-                ruleRepository.addQuestion(new Question(tempID, tempQuestion, new Answer()));
+                ruleRepository.addQuestion(new Question(tempID, tempQuestion, answer));
                 
             }
         }

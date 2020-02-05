@@ -23,7 +23,7 @@ namespace Expert
 
         public bool getEvaluatedAnswer(string input)
         {
-            return true;
+            return answer.evaluateAnswerByInput(input);
         }
     }
 }

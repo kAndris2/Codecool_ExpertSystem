@@ -8,6 +8,7 @@ namespace Expert
     {
         FactParser factParser;
         RuleParser ruleParser;
+        Dictionary<string, bool> userAnswers = new Dictionary<string, bool>();
 
         public ESProvider(FactParser factParser, RuleParser ruleParser)
         {
@@ -24,9 +25,18 @@ namespace Expert
             while (enumerator.MoveNext())
             {
                 Console.WriteLine(enumerator.Current.getQuestion());
+                bool userInput = enumerator.Current.getEvaluatedAnswer(Console.ReadLine());
                 
-                string userInput = Console.ReadLine();
-
+                if (userInput)
+                {
+                    userAnswers.Add(enumerator.Current.getId(), userInput);
+                    
+                }
+                else
+                {
+                    throw new ArgumentException("Invalid input.");
+                }
+                
 
             }
         }
