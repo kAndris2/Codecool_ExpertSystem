@@ -7,6 +7,8 @@ namespace Expert
 {
     class FactParser : XMLParser
     {
+        public List<Fact> Facts = new List<Fact>();
+
         public FactRepository getFactRepository() { return new FactRepository(); }
 
         public override void loadXmlDocument(string xmlPath)
@@ -25,6 +27,7 @@ namespace Expert
                     bool tempValue = item.InnerText.Equals("true");
                     fact.setFactValueById(tempID, tempValue);
                 }
+                Facts.Add(fact);
             }
         }
     }
