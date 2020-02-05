@@ -24,19 +24,46 @@ namespace Expert
             foreach (XmlNode xmlNode in xmlDoc.DocumentElement)
             {
                 string tempID = xmlNode.Attributes["id"].Value;
-                string tempDescription = xmlNode.ChildNodes[0].InnerText;
+                string tempQuestion = xmlNode.ChildNodes[0].InnerText;
                 List<string> tempValue =new List<string>();
-                tempValue.Add(xmlNode.ChildNodes[1].ChildNodes[0].ChildNodes[0].Name);
-                string[] answers = new string[tempValue.Count];
                 
-                
-                for (int i = 0; i < tempValue.Count; i++)
+                Answer answer = new Answer();
+                foreach (XmlNode item in xmlNode.ChildNodes[1])
                 {
-                    answers[i] = tempValue[i];
                     
+                    string[] selectionString1 = (item.ChildNodes[0].Attributes["value"].Value).Split(",");
+                    string selectionType1 = item.Attributes["value"].Value;
+                    Value value;
+                    if (selectionString1.Length > 0)
+                    {
+                        value = new MultipleValue(selectionString1,selectionType1.Equals("true"));
+                    }
+                    else
+                    {
+                        value = new SingleValue(selectionString1, selectionType1.Equals("true"));
+                    }
 
+                    answer.addValue(value);
+                    
+                   
                 }
-                ruleRepository.addQuestion(new Question(tempID, tempDescription, new Answer(answers)));
+                
+
+                string[] selectionString2 = (xmlNode.ChildNodes[1].ChildNodes[1].ChildNodes[0].Attributes["value"].Value).Split(",");
+                string selectionType2 = xmlNode.ChildNodes[1].ChildNodes[1].Attributes["value"].Value;
+
+
+
+
+                //Console.WriteLine(xmlNode.ChildNodes[1].ChildNodes[0].Attributes["value"].Value);
+                //Console.WriteLine(xmlNode.ChildNodes[1].ChildNodes[0].ChildNodes[0].Name);
+                //Console.WriteLine(xmlNode.ChildNodes[1].ChildNodes[0].ChildNodes[0].Attributes["value"].Value);
+
+
+
+                tempValue.Add(xmlNode.ChildNodes[1].ChildNodes[0].ChildNodes[0].Name);
+                
+                ruleRepository.addQuestion(new Question(tempID, tempQuestion, new Answer()));
                 
             }
         }

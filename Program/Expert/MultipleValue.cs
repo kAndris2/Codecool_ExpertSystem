@@ -6,13 +6,23 @@ namespace Expert
 {
     class MultipleValue : Value
     {
-        List<string> param { get; set; } = new List<string>();
+        string[] param { get; set; }
         bool selectionType { get; set; }
 
-        public MultipleValue(List<string> param, bool selectionType)
+        public MultipleValue(string[] param, bool selectionType)
         {
             this.param = param;
             this.selectionType = selectionType;
+        }
+
+        public override string[] getInputPattern()
+        {
+            return param;
+        }
+
+        public override bool getSelectionType()
+        {
+            return selectionType;
         }
     }
 }

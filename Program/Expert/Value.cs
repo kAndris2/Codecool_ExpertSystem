@@ -6,14 +6,12 @@ namespace Expert
 {
     abstract class Value
     {
-        public List<string> getInputPattern()
-        {
-            return null;
-        }
 
-        public bool getSelectionType()
-        {
-            return true;
-        }
+        public abstract string[] getInputPattern();
+
+
+        public abstract bool getSelectionType();
+        
+        
     }
 }

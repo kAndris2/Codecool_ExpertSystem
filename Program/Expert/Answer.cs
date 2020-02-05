@@ -6,13 +6,12 @@ namespace Expert
 {
     class Answer
     {
-        List<string> values = new List<string>();
-        private Value value;
+        List<Value> values = new List<Value>();
+        Value value;
 
-        public Answer(string[] values)
+        public Answer()
         {
-            for (int i = 0; i < values.Length; i++)
-                this.values.Add(values[i]);
+            
         }
 
         public bool evaluateAnswerByInput(string input)
@@ -22,7 +21,8 @@ namespace Expert
 
         public void addValue(Value value)
         {
-            this.value = value;
+            values.Add(value);
         }
+        
     }
 }
