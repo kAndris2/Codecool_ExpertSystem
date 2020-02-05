@@ -7,10 +7,13 @@ namespace Expert
     {
         static void Main(string[] args)
         {
-            ESProvider esp = new ESProvider(new FactParser(), new RuleParser());
+            ESProvider esp = null;
+            try
+            {
+                esp = new ESProvider(new FactParser(), new RuleParser());
+            }
+            catch (ArgumentException e) { Console.WriteLine("[ERROR]: ", e.Message); }
             esp.collectAnswers();
-            esp.evaluate();
-            
         }
     }
 }
