@@ -13,7 +13,7 @@ namespace Expert
             {
                 esp.collectAnswers();
                 string winner = esp.evaluate();
-                Console.WriteLine($"Winner:  {winner}");
+                Console.WriteLine($"Best choice:  {winner}");
             }
             catch (ArgumentException e) { ManageEx(e.Message); }
             catch (FileNotFoundException e) { ManageEx(e.Message); }

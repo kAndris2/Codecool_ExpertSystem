@@ -64,7 +64,7 @@ namespace Expert
                     return enumerator.Current.getDescription();
                 }
             }
-            return null;
+            return "There's no exact match.";
         }
     }
 }
