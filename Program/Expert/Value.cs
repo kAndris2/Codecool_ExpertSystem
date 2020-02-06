@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Expert
 {
-    abstract class Value
+    public abstract class Value
     {
 
         public abstract string[] getInputPattern();

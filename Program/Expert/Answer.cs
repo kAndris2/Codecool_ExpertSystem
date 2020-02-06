@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Expert
 {
-    class Answer
+    public class Answer
     {
         List<Value> values = new List<Value>();
 

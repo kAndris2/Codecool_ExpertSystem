@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Expert
 {
-    class RuleRepository
+    public class RuleRepository
     {
         List<Question> questions = new List<Question>();
 

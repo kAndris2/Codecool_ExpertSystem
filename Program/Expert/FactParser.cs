@@ -6,7 +6,7 @@ using System.IO;
 
 namespace Expert
 {
-    class FactParser : XMLParser
+    public class FactParser : XMLParser
     {
         FactRepository factRepository ;
 

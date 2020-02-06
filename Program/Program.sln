@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Expert", "Expert\Expert.csproj", "{BECA8E7E-74F4-45A9-8D3E-679716DB59D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Expert", "Expert\Expert.csproj", "{BECA8E7E-74F4-45A9-8D3E-679716DB59D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpertSystem.Test", "ExpertSystem.Test\ExpertSystem.Test.csproj", "{C826FEAC-67F3-4EC3-A824-2657E8207F4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BECA8E7E-74F4-45A9-8D3E-679716DB59D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BECA8E7E-74F4-45A9-8D3E-679716DB59D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BECA8E7E-74F4-45A9-8D3E-679716DB59D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C826FEAC-67F3-4EC3-A824-2657E8207F4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C826FEAC-67F3-4EC3-A824-2657E8207F4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C826FEAC-67F3-4EC3-A824-2657E8207F4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C826FEAC-67F3-4EC3-A824-2657E8207F4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

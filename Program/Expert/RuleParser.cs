@@ -6,7 +6,7 @@ using System.IO;
 
 namespace Expert
 {
-    class RuleParser : XMLParser
+    public class RuleParser : XMLParser
     {
         RuleRepository ruleRepository;
         public RuleParser()

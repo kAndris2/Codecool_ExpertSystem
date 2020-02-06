@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Expert
 {
-    class FactIterator : IEnumerator<Fact>
+    public class FactIterator : IEnumerator<Fact>
     {
         List<Fact> facts { get; set; } = new List<Fact>();
         int position = -1;

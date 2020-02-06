@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Expert
 {
-    class QuestionIterator : IEnumerator<Question>
+    public class QuestionIterator : IEnumerator<Question>
     {
         List<Question> questions;
         int position = -1;

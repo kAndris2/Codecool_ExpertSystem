@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Expert
 {
-    class Question
+    public class Question
     {
         string question { get; set; }
         string id { get; set; }

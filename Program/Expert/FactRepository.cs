@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Expert
 {
-    class FactRepository
+    public class FactRepository
     {
         List<Fact> Facts = new List<Fact>();
 

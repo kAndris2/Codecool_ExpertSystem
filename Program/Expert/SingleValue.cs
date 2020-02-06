@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Expert
 {
-    class SingleValue : Value
+    public class SingleValue : Value
     {
         string[] param { get; set; } = new string[1];
 

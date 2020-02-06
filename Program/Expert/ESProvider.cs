@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Expert
 {
-    class ESProvider
+    public class ESProvider
     {
         FactParser factParser;
         RuleParser ruleParser;
