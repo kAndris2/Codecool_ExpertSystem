@@ -6,7 +6,7 @@ namespace Expert
 {
     class RuleRepository
     {
-        public List<Question> questions = new List<Question>();
+        List<Question> questions = new List<Question>();
 
         public void addQuestion(Question question)
         {

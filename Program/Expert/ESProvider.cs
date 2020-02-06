@@ -18,7 +18,7 @@ namespace Expert
 
         public void collectAnswers()
         {
-            factParser.loadXmlDocument("facts.xml");
+            
             ruleParser.loadXmlDocument("rules.xml");
             IEnumerator<Question> enumerator = ruleParser.getRuleRepository().getEnumerator();
             
@@ -30,8 +30,6 @@ namespace Expert
                 
                 userAnswers.Add(enumerator.Current.getId(), userInput);
                  
-                
-
             }
         }
 
@@ -43,27 +41,27 @@ namespace Expert
 
         public string evaluate()
         {
-            
-            
-            
-            
+
+
+            factParser.loadXmlDocument("facts.xml");
+            IEnumerator<Fact> enumerator = factParser.getFactRepository().getEnumerator();
             
             int checkCounter;
-            foreach (var fact in factParser.Facts)
+            while (enumerator.MoveNext())
             {
                 
                 checkCounter = 0;
-                foreach (var answer in fact.evals)
+                foreach (var answer in enumerator.Current.evals)
                 {
                     
-                    if (getAnswerByQuestion(answer.Key).Equals(fact.evals[answer.Key]))
+                    if (getAnswerByQuestion(answer.Key).Equals(enumerator.Current.evals[answer.Key]))
                     {
                         checkCounter++;
                     }
                 }
                 if (checkCounter == userAnswers.Count)
                 {
-                    return fact.getDescription();
+                    return enumerator.Current.getDescription();
                 }
             }
             return null;

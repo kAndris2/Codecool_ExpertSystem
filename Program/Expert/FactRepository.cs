@@ -6,16 +6,16 @@ namespace Expert
 {
     class FactRepository
     {
-        private Fact fact;
+        List<Fact> Facts = new List<Fact>();
 
         public void addFact(Fact fact)
         {
-            this.fact = fact;
+            Facts.Add(fact);
         }
 
         public IEnumerator<Fact> getEnumerator() 
         {
-            return new FactIterator( new FactParser().Facts ); 
+            return new FactIterator(Facts); 
         }
     }
 }
