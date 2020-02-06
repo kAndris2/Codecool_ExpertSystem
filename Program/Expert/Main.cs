@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Xml;
+using System.IO;
 
 namespace Expert
 {
@@ -14,8 +15,13 @@ namespace Expert
                 string winner = esp.evaluate();
                 Console.WriteLine($"Winner:  {winner}");
             }
-            catch (ArgumentException e) { Console.WriteLine("[ERROR]: "+ e.Message); }
-           
+            catch (ArgumentException e) { ManageEx(e.Message); }
+            catch (FileNotFoundException e) { ManageEx(e.Message); }
+        }
+
+        public static void ManageEx(string message)
+        {
+            Console.WriteLine("[ERROR]: " + message);
         }
     }
 }

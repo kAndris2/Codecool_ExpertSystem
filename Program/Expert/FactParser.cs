@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Xml;
+using System.IO;
 
 namespace Expert
 {
@@ -22,6 +23,9 @@ namespace Expert
 
         public override void loadXmlDocument(string xmlPath)
         {
+            if (!File.Exists(xmlPath))
+                throw new FileNotFoundException($"File not found! ('{xmlPath}')");
+
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(xmlPath);
             foreach (XmlNode xmlNode in xmlDoc.DocumentElement)
