@@ -17,5 +17,9 @@ namespace Expert
         { 
             return new QuestionIterator(questions); 
         }
+        public List<Question> GetQuestions()
+        {
+            return questions;
+        }
     }
 }

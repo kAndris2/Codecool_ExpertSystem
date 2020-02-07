@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Expert
 {
-    abstract class XMLParser
+    public abstract class XMLParser
     {
         public abstract void loadXmlDocument(string xmlPath);
     }

@@ -23,5 +23,9 @@ namespace Expert
         {
             values.Add(value);
         }
+        public List<Value> GetValues()
+        {
+            return values;
+        }
     }
 }

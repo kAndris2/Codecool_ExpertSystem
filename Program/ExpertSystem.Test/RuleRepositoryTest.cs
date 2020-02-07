@@ -13,10 +13,12 @@ namespace ExpertSystem.Test
         [Fact]
         public void AddQuestion_Work()
         {
-            List<Question> questions = new List<Question>();
-            Question question = new Question();
+            Question question = new Question ("id", "test question", new Answer() );
 
-            Assert.True();
+            RuleRepository ruleRepository = new RuleRepository();
+            ruleRepository.addQuestion(question);
+            Assert.True(ruleRepository.GetQuestions().Count == 1);
+            Assert.Contains<Question>(question, ruleRepository.GetQuestions());
         }
 
     }

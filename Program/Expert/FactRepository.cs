@@ -17,5 +17,9 @@ namespace Expert
         {
             return new FactIterator(Facts); 
         }
+        public List<Fact> GetFacts()
+        {
+            return Facts;
+        }
     }
 }
