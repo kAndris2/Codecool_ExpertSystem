@@ -25,7 +25,7 @@ namespace Expert
             while (enumerator.MoveNext())
             {
                 Console.WriteLine(enumerator.Current.getQuestion());
-                bool userInput = enumerator.Current.getEvaluatedAnswer(Console.ReadLine());
+                bool userInput = enumerator.Current.getEvaluatedAnswer(Console.ReadLine().ToLower());
                 
                 
                 userAnswers.Add(enumerator.Current.getId(), userInput);
